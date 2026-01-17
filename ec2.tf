@@ -7,12 +7,12 @@ resource "aws_instance" "tf_ec2_instance" {
   vpc_security_group_ids = [aws_security_group.tf_ec2_sg.id]
 #  depends_on             = [aws_s3_object.tf_s3_object]
 
-#  user_data = file("./bootstrap.sh")
+  user_data = file("./bootstrap.sh")
 
   tags = merge (
     local.common_tags,
     {
-      Name = "Jenkins_server"
+      Name = "Minikube_server"
       Usage = "To run Jenkines pipeline"
       User_script = "bootstrap-ec2"
     }
@@ -20,7 +20,7 @@ resource "aws_instance" "tf_ec2_instance" {
 }
 
 resource "aws_security_group" "tf_ec2_sg" {
-  name        = "Jenkins-server-sg"
+  name        = "Minikube-server-sg"
   description = "Allow SSH and HTTP traffic"
   vpc_id      = var.vpc_id
 

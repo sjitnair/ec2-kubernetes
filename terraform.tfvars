@@ -1,5 +1,5 @@
-req_id             = "REQ-00001"
-proj_name          = "Project_jk_deploy"
+req_id             = "REQ-00002"
+proj_name          = "Project_minikube_deploy"
 aws_region         = "us-east-1"
 vpc_id             = "vpc-02a3046e80968cf34"
 
