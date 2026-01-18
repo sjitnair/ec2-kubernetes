@@ -29,6 +29,7 @@ kubectl version --client
 minikube start --driver=docker
 minikube status
 echo "############Finished docker Minikube installation phase2 ############"
+sudo git clone https://github.com/sjitnair/minikube-demo.git /home/ubuntu/minikube-demo
 SFE
 
 chmod +x /tmp/docker_install.sh
